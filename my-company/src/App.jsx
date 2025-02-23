@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import BrowserRouter from 'react-router-dom/BrowserRouter';
-import Routes from 'react-router-dom/Routes';
-import Route from 'react-router-dom/Route';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
@@ -12,14 +9,18 @@ import Footer from './components/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        
-      </Routes>
+      <div style={{ minHeight: '100vh', position: 'relative' }}>
+        <Navbar />
+        <div style={{ paddingBottom: '60px' }}> {/* Prevent footer overlap */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
