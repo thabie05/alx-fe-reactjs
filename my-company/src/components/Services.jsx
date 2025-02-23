@@ -15,7 +15,7 @@ function Services() {
       minHeight: 'calc(100vh - 160px)'
     }}>
       <h1 style={{ color: '#333', borderBottom: '2px solid #4CAF50' }}>Our Services</h1>
-      <ul style={{ listStyle: 'none', padding: '20px' }}>
+      <ul style={{ color: '#333', listStyle: 'none', padding: '20px' }}>
         {services.map((service, index) => (
           <li key={index} style={{
             padding: '15px',
