@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import useRecipeStore from '../store/recipeStore';
 
-const FavoritesList = () => {
+ const FavoritesList = () => {
   const { favorites, recipes, removeFavorite } = useRecipeStore();
   
   const favoriteRecipes = favorites.map(id => 
@@ -31,3 +31,4 @@ const FavoritesList = () => {
     </div>
   );
 };
+export default FavoritesList;
