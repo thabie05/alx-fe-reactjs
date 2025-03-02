@@ -9,7 +9,7 @@ const EditRecipeForm = ({ recipe }) => {
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // This was missing in the initial implementation
+    e.preventDefault(); // Added event.preventDefault()
     updateRecipe(recipe.id, { title, description });
     navigate(`/recipes/${recipe.id}`);
   };
