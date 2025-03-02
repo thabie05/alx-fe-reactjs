@@ -3,6 +3,8 @@ import SearchBar from './components/SearchBar';
 import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/AddRecipeForm';
 import RecipeDetails from './components/RecipeDetails';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 import './App.css';
 
 function App() {
@@ -10,9 +12,15 @@ function App() {
     <Router>
       <div className="app">
         <nav>
-          <Link to="/"><h1>Recipe Sharing App</h1></Link>
+          <Link to="/" className="brand">
+            <h1>🍳 Recipe Hub</h1>
+          </Link>
+          <div className="nav-links">
+            <Link to="/favorites">Favorites</Link>
+            <Link to="/recommendations">Recommendations</Link>
+          </div>
         </nav>
-        
+
         <Routes>
           <Route path="/" element={
             <>
@@ -22,10 +30,10 @@ function App() {
             </>
           } />
           <Route path="/recipes/:id" element={<RecipeDetails />} />
+          <Route path="/favorites" element={<FavoritesList />} />
+          <Route path="/recommendations" element={<RecommendationsList />} />
         </Routes>
       </div>
     </Router>
   );
 }
-
-export default App;
