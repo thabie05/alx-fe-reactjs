@@ -4,8 +4,10 @@ const useRecipeStore = create((set, get) => ({
   recipes: [],
   searchTerm: '',
   filteredRecipes: [],
+  favorites: [],
+  recommendations: [],
   
-  // Actions
+  // Existing search/filter actions
   setSearchTerm: (term) => {
     set({ searchTerm: term });
     get().filterRecipes();
@@ -23,15 +25,58 @@ const useRecipeStore = create((set, get) => ({
     set({ filteredRecipes: filtered });
   },
 
-  // Update existing actions to trigger filtering
+  // New favorites actions
+  addFavorite: (recipeId) => {
+    set(state => ({ 
+      favorites: [...state.favorites, recipeId] 
+    }));
+    get().generateRecommendations();
+  },
+  
+  removeFavorite: (recipeId) => {
+    set(state => ({
+      favorites: state.favorites.filter(id => id !== recipeId)
+    }));
+    get().generateRecommendations();
+  },
+
+  // New recommendations logic
+  generateRecommendations: () => {
+    const { recipes, favorites } = get();
+    const favoriteWords = recipes
+      .filter(recipe => favorites.includes(recipe.id))
+      .flatMap(recipe => [
+        ...recipe.title.toLowerCase().split(/\W+/),
+        ...recipe.description.toLowerCase().split(/\W+/)
+      ]);
+      
+    const uniqueWords = [...new Set(favoriteWords)];
+    
+    const recommendations = recipes
+      .filter(recipe => 
+        !favorites.includes(recipe.id) &&
+        uniqueWords.some(word => 
+          recipe.title.toLowerCase().includes(word) ||
+          recipe.description.toLowerCase().includes(word)
+        ))
+      .slice(0, 5);
+
+    set({ recommendations });
+  },
+
+  // Updated existing actions
   addRecipe: (newRecipe) => {
     set(state => ({ recipes: [...state.recipes, newRecipe] }));
     get().filterRecipes();
   },
   
   deleteRecipe: (id) => {
-    set(state => ({ recipes: state.recipes.filter(r => r.id !== id) }));
+    set(state => ({
+      recipes: state.recipes.filter(r => r.id !== id),
+      favorites: state.favorites.filter(favId => favId !== id)
+    }));
     get().filterRecipes();
+    get().generateRecommendations();
   },
   
   updateRecipe: (id, updatedRecipe) => {
@@ -41,11 +86,13 @@ const useRecipeStore = create((set, get) => ({
       )
     }));
     get().filterRecipes();
+    get().generateRecommendations();
   },
   
   setRecipes: (recipes) => {
     set({ recipes });
     get().filterRecipes();
+    get().generateRecommendations();
   }
 }));
 
