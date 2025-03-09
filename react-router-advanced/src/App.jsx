@@ -27,7 +27,8 @@ function App() {
             <Route index element={<ProfileDetails />} />
           </Route>
         </Route>
-        <Route path="/posts/:postId" element={<Post />} />
+        {/* Added blog routes */}
+        <Route path="/blog/:id" element={<BlogPost />} />
       </Routes>
     </div>
     </BrowserRouter>
