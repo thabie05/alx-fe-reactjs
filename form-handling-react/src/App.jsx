@@ -1,13 +1,13 @@
-import RegistrationForm from "./components/RegistrationForm"
+import FormikForm from "./components/FormikForm";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <RegistrationForm />
-    </>
-  )
+    <div>
+      <h1>User Registration</h1>
+      <FormikForm />
+    </div>
+  );
 }
 
-export default App
+export default App;
