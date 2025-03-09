@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import Home from './Home'
 import Login from './Login'
 import Profile from './Profile'
@@ -9,6 +9,7 @@ import ProfileSettings from './ProfileSettings'
 
 function App() {
   return (
+    <BrowserRouter>
     <div>
       <nav>
         <Link to="/">Home</Link> | 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/posts/:postId" element={<Post />} />
       </Routes>
     </div>
+    </BrowserRouter>
   )
 }
 

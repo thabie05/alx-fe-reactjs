@@ -5,8 +5,10 @@ const Profile = () => {
     <div>
       <h1>Profile</h1>
       <nav>
-        <Link to="details">Details</Link>
-        <Link to="settings">Settings</Link>
+      <Routes>
+            <Route path="details" element={<ProfileDetails />} />
+            <Route path="settings" element={<ProfileSettings />} />
+      </Routes>
       </nav>
       <Outlet />
     </div>
