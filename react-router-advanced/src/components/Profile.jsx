@@ -1,23 +1,23 @@
+import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { useAuth } from './components/AuthContext';
 
-export default function Profile() {
-  const { logout } = useAuth();
-
+function Profile() {
   return (
-    <div className="profile-layout">
-      <h2>Profile Page</h2>
-      <button onClick={logout}>Logout</button>
-      
-      <nav className="profile-nav">
-        <Link to="details">Details</Link> | 
-        <Link to="settings">Settings</Link>
+    <div>
+      <h2>Profile</h2>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/profile/details">Details</Link>
+          </li>
+          <li>
+            <Link to="/profile/settings">Settings</Link>
+          </li>
+        </ul>
       </nav>
-
-      {/* Outlet for nested routes */}
-      <div className="profile-content">
-        <Outlet />
-      </div>
+      <Outlet />
     </div>
   );
 }
+
+export default Profile;
