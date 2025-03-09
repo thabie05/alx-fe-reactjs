@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Home from './Home'
-import Login from './Login'
-import Profile from './Profile'
-import Post from './Post'
-import { ProtectedRoute } from './ProtectedRoute'
-import ProfileDetails from './ProfileDetails'
-import ProfileSettings from './ProfileSettings'
+import Home from './components/Home'
+import Login from './components/Login'
+import Profile from './components/Profile'
+import BlogPost from './components/BlogPost'
+import { ProtectedRoute } from './components/ProtectedRoute'
+import ProfileDetails from './components/ProfileDetails'
+import ProfileSettings from './components/ProfileSettings'
 
 function App() {
   return (
