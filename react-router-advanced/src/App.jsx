@@ -1,4 +1,5 @@
 import { Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { RequireAuth } from './components/RequireAuth';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -9,6 +10,7 @@ import Post from './components/Post';
 
 export default function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <nav>
         <Link to="/">Home</Link> | 
@@ -35,5 +37,6 @@ export default function App() {
         </Route>
       </Routes>
     </div>
+    </BrowserRouter>
   );
 }
