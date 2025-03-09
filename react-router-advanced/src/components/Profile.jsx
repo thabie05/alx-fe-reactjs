@@ -5,14 +5,19 @@ export default function Profile() {
   const { logout } = useAuth();
 
   return (
-    <div>
-      <h1>Profile Page</h1>
+    <div className="profile-layout">
+      <h2>Profile Page</h2>
       <button onClick={logout}>Logout</button>
-      <nav>
+      
+      <nav className="profile-nav">
         <Link to="details">Details</Link> | 
         <Link to="settings">Settings</Link>
       </nav>
-      <Outlet />
+
+      {/* Outlet for nested routes */}
+      <div className="profile-content">
+        <Outlet />
+      </div>
     </div>
   );
 }
