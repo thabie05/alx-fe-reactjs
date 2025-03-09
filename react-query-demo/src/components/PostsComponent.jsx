@@ -1,3 +1,4 @@
+import React from 'react';
 import { useQuery } from 'react-query';
 
 const fetchPosts = async () => {
@@ -9,7 +10,19 @@ const fetchPosts = async () => {
 };
 
 const PostsComponent = () => {
-  const { data, error, isLoading, isError, refetch } = useQuery('posts', fetchPosts);
+  const {
+    data,
+    error,
+    isLoading,
+    isError,
+    isFetching,
+    refetch,
+  } = useQuery('posts', fetchPosts, {
+    cacheTime: 1000 * 60 * 5, // Cache data for 5 minutes
+    staleTime: 1000 * 60 * 1, // Data is considered fresh for 1 minute
+    refetchOnWindowFocus: true, // Refetch data when the window is focused
+    keepPreviousData: true, // Keep previous data while fetching new data
+  });
 
   if (isLoading) {
     return <div>Loading...</div>;
@@ -22,7 +35,10 @@ const PostsComponent = () => {
   return (
     <div>
       <h1>Posts</h1>
-      <button onClick={refetch}>Refetch Data</button>
+      <button onClick={refetch} disabled={isFetching}>
+        {isFetching ? 'Refetching...' : 'Refetch Data'}
+      </button>
+      {isFetching && <div>Refreshing data...</div>}
       <ul>
         {data.map(post => (
           <li key={post.id}>
