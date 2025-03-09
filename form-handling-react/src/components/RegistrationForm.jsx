@@ -49,7 +49,7 @@ const RegistrationForm = () => {
         <input
           type="text"
           name="username"
-          value={formData.username} // Bind to state
+          value={username} // Bind to state
           onChange={handleChange}
         />
         {errors.username && <span>{errors.username}</span>}
@@ -59,7 +59,7 @@ const RegistrationForm = () => {
         <input
           type="email"
           name="email"
-          value={formData.email} // Bind to state
+          value={email} // Bind to state
           onChange={handleChange}
         />
         {errors.email && <span>{errors.email}</span>}
@@ -69,7 +69,7 @@ const RegistrationForm = () => {
         <input
           type="password"
           name="password"
-          value={formData.password} // Bind to state
+          value={password} // Bind to state
           onChange={handleChange}
         />
         {errors.password && <span>{errors.password}</span>}
