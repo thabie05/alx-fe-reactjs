@@ -23,7 +23,7 @@ return(
             rounded-xl 
             transition delay-150 duration-300 
             ease-in-out hover:-translate-y-1 
-            hover:scale-110" 
+            hover:scale-110 shadow-xl" 
             key={recipe.id}>
                 <h1 className="text-white ">{recipe.title}</h1>
                 <img src={recipe.image} alt={recipe.title} />
