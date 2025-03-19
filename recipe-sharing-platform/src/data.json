@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Spaghetti Carbonara.png",
     "ingredients": [
       "400g spaghetti",
       "200g pancetta",
@@ -11,7 +11,7 @@
       "1 cup grated Pecorino Romano",
       "Freshly ground black pepper"
     ],
-    "steps": [
+    "instructions": [
       "Boil pasta in salted water until al dente",
       "Cook pancetta until crispy",
       "Whisk eggs and cheese together",
@@ -24,7 +24,7 @@
     "id": 2,
     "title": "Chicken Tikka Masala",
     "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Chicken Tikka Masala.png",
     "ingredients": [
       "500g chicken breast",
       "1 cup yogurt",
@@ -33,7 +33,7 @@
       "1 can crushed tomatoes",
       "1/2 cup heavy cream"
     ],
-    "steps": [
+    "instructions": [
       "Marinate chicken in yogurt and spices",
       "Grill chicken until charred",
       "Sauté onions and garlic",
@@ -46,7 +46,7 @@
     "id": 3,
     "title": "Vegetarian Buddha Bowl",
     "summary": "A nutritious bowl packed with quinoa, roasted vegetables, avocado, and tahini dressing.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Vegetarian Buddha Bowl.png",
     "ingredients": [
       "1 cup quinoa",
       "1 sweet potato, cubed",
@@ -55,7 +55,7 @@
       "2 cups mixed greens",
       "2 tbsp tahini"
     ],
-    "steps": [
+    "instructions": [
       "Cook quinoa according to package instructions",
       "Roast sweet potato cubes in the oven",
       "Toss chickpeas with olive oil and spices",
@@ -67,7 +67,7 @@
     "id": 4,
     "title": "Beef Tacos",
     "summary": "Flavorful ground beef tacos with fresh toppings and homemade seasoning.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Beef Tacos.png",
     "ingredients": [
       "500g ground beef",
       "1 packet taco seasoning",
@@ -76,7 +76,7 @@
       "1 cup diced tomatoes",
       "1/2 cup shredded cheese"
     ],
-    "steps": [
+    "instructions": [
       "Brown ground beef in a skillet",
       "Add taco seasoning and water",
       "Simmer until thickened",
@@ -88,7 +88,7 @@
     "id": 5,
     "title": "Classic Caesar Salad",
     "summary": "A timeless salad with crisp romaine, croutons, parmesan, and creamy Caesar dressing.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Classic Caesar Salad.png",
     "ingredients": [
       "1 head romaine lettuce",
       "1/2 cup croutons",
@@ -96,7 +96,7 @@
       "1/4 cup Caesar dressing",
       "1 tbsp lemon juice"
     ],
-    "steps": [
+    "instructions": [
       "Chop romaine lettuce into bite-sized pieces",
       "Toss lettuce with dressing and lemon juice",
       "Add croutons and parmesan",
@@ -107,7 +107,7 @@
     "id": 6,
     "title": "Vegetable Stir-Fry",
     "summary": "A quick and healthy stir-fry with colorful vegetables and a savory sauce.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Vegetable Stir-Fry.png",
     "ingredients": [
       "2 cups broccoli florets",
       "1 red bell pepper, sliced",
@@ -116,7 +116,7 @@
       "3 tbsp soy sauce",
       "1 tbsp sesame oil"
     ],
-    "steps": [
+    "instructions": [
       "Heat sesame oil in a wok",
       "Add vegetables and stir-fry for 5 minutes",
       "Add soy sauce and cook for 2 more minutes",
@@ -127,7 +127,7 @@
     "id": 7,
     "title": "Banana Bread",
     "summary": "Moist and delicious banana bread with a hint of cinnamon.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/banana_bread.jpeg",
     "ingredients": [
       "3 ripe bananas",
       "1/3 cup melted butter",
@@ -136,7 +136,7 @@
       "1 tsp vanilla extract",
       "1 1/2 cups flour"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 350°F (175°C)",
       "Mash bananas in a bowl",
       "Mix in melted butter, sugar, egg, and vanilla",
@@ -148,7 +148,7 @@
     "id": 8,
     "title": "Shrimp Scampi",
     "summary": "Garlicky shrimp served over linguine with a buttery white wine sauce.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Shrimp_Scampi.jpeg",
     "ingredients": [
       "500g shrimp, peeled and deveined",
       "8 oz linguine",
@@ -157,7 +157,7 @@
       "1/2 cup white wine",
       "1/4 cup parsley, chopped"
     ],
-    "steps": [
+    "instructions": [
       "Cook linguine according to package instructions",
       "Sauté garlic in butter",
       "Add shrimp and cook until pink",
@@ -169,7 +169,7 @@
     "id": 9,
     "title": "Chocolate Chip Cookies",
     "summary": "Classic soft and chewy chocolate chip cookies.",
-    "image": "https://via.placeholder.com/150",
+    "image": "/images/Chocolate_Chip_Cookies.png",
     "ingredients": [
       "1 cup butter, softened",
       "1 cup sugar",
@@ -178,7 +178,7 @@
       "2 tsp vanilla extract",
       "3 cups flour"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 375°F (190°C)",
       "Cream butter and sugars",
       "Add eggs and vanilla",
@@ -190,7 +190,7 @@
     "id": 10,
     "title": "Beef Burger",
     "summary": "Juicy beef burger with all the classic toppings.",
-    "image": "https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg",
+    "image": "/images/cheesburgers.jpeg",
     "ingredients": [
       "500g ground beef",
       "4 burger buns",
@@ -199,11 +199,52 @@
       "1 onion, sliced",
       "Lettuce leaves"
     ],
-    "steps": [
+    "instructions": [
       "Form beef into patties",
       "Grill patties to desired doneness",
       "Add cheese during the last minute of cooking",
       "Toast buns and assemble with toppings"
+    ]
+  },{
+    "id": 11,
+    "title": "Vegetable Lasagna",
+    "summary": "A hearty vegetarian lasagna layered with zucchini, spinach, and ricotta.",
+    "image": "/images/Vegetable Lasagna.png",
+    "ingredients": [
+      "9 lasagna noodles",
+      "2 cups marinara sauce",
+      "1 cup ricotta cheese",
+      "1 zucchini, sliced",
+      "2 cups spinach",
+      "1 cup shredded mozzarella"
+    ],
+    "instructions": [
+      "Preheat oven to 375°F (190°C)",
+      "Cook lasagna noodles according to package instructions",
+      "Layer noodles, marinara, ricotta, and vegetables in a baking dish",
+      "Top with mozzarella cheese",
+      "Bake for 30 minutes until bubbly and golden"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Pancakes",
+    "summary": "Fluffy homemade pancakes perfect for breakfast or brunch.",
+    "image": "/images/Pancakes.png",
+    "ingredients": [
+      "1 1/2 cups flour",
+      "3 1/2 tsp baking powder",
+      "1 tbsp sugar",
+      "1 1/4 cups milk",
+      "1 egg",
+      "3 tbsp melted butter"
+    ],
+    "instructions": [
+      "Mix dry ingredients in a bowl",
+      "Whisk in milk, egg, and melted butter",
+      "Heat a griddle over medium heat",
+      "Pour batter onto griddle and cook until bubbles form",
+      "Flip and cook until golden brown"
     ]
   }
 ]
