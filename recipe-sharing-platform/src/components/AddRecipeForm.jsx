@@ -10,52 +10,67 @@ const AddRecipeForm = () => {
   const [touched, setTouched] = useState({});
 
   const validateField = (name, value) => {
-    let error = '';
     switch (name) {
       case 'title':
-        if (!value.trim()) error = 'Title is required';
+        if (!value.trim()) return 'Title is required';
         break;
       case 'ingredients':
-        if (!value.trim()) {
-          error = 'Ingredients are required';
-        } else if (value.split('\n').filter(line => line.trim()).length < 2) {
-          error = 'At least two ingredients required';
+        if (!value.trim()) return 'Ingredients are required';
+        if (value.split('\n').filter(line => line.trim()).length < 2) {
+          return 'At least two ingredients required';
         }
         break;
       case 'steps':
-        if (!value.trim()) error = 'Preparation steps are required';
+        if (!value.trim()) return 'Preparation steps are required';
         break;
       default:
-        break;
+        return '';
     }
-    return error;
+    return '';
   };
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    const name = e.target.name;
+    const value = e.target.value;
     
-    // Validate on change if field was already touched
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+
     if (touched[name]) {
-      setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+      setErrors(prev => ({
+        ...prev,
+        [name]: validateField(name, value)
+      }));
     }
   };
 
   const handleBlur = (e) => {
-    const { name, value } = e.target;
-    setTouched(prev => ({ ...prev, [name]: true }));
-    setErrors(prev => ({ ...prev, [name]: validateField(name, value) }));
+    const name = e.target.name;
+    const value = e.target.value;
+    
+    setTouched(prev => ({
+      ...prev,
+      [name]: true
+    }));
+    
+    setErrors(prev => ({
+      ...prev,
+      [name]: validateField(name, value)
+    }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    
     // Validate all fields
     const newErrors = {
       title: validateField('title', formData.title),
       ingredients: validateField('ingredients', formData.ingredients),
       steps: validateField('steps', formData.steps),
     };
-    
+
     setErrors(newErrors);
     setTouched({
       title: true,
@@ -83,7 +98,7 @@ const AddRecipeForm = () => {
       <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-6">
         <h2 className="text-2xl font-bold text-gray-800 mb-6">Add New Recipe</h2>
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div>
+        <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Recipe Title
             </label>
