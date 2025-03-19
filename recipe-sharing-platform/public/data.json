@@ -11,7 +11,7 @@
       "1 cup grated Pecorino Romano",
       "Freshly ground black pepper"
     ],
-    "steps": [
+    "instructions": [
       "Boil pasta in salted water until al dente",
       "Cook pancetta until crispy",
       "Whisk eggs and cheese together",
@@ -33,7 +33,7 @@
       "1 can crushed tomatoes",
       "1/2 cup heavy cream"
     ],
-    "steps": [
+    "instructions": [
       "Marinate chicken in yogurt and spices",
       "Grill chicken until charred",
       "Sauté onions and garlic",
@@ -55,7 +55,7 @@
       "2 cups mixed greens",
       "2 tbsp tahini"
     ],
-    "steps": [
+    "instructions": [
       "Cook quinoa according to package instructions",
       "Roast sweet potato cubes in the oven",
       "Toss chickpeas with olive oil and spices",
@@ -76,7 +76,7 @@
       "1 cup diced tomatoes",
       "1/2 cup shredded cheese"
     ],
-    "steps": [
+    "instructions": [
       "Brown ground beef in a skillet",
       "Add taco seasoning and water",
       "Simmer until thickened",
@@ -96,7 +96,7 @@
       "1/4 cup Caesar dressing",
       "1 tbsp lemon juice"
     ],
-    "steps": [
+    "instructions": [
       "Chop romaine lettuce into bite-sized pieces",
       "Toss lettuce with dressing and lemon juice",
       "Add croutons and parmesan",
@@ -116,7 +116,7 @@
       "3 tbsp soy sauce",
       "1 tbsp sesame oil"
     ],
-    "steps": [
+    "instructions": [
       "Heat sesame oil in a wok",
       "Add vegetables and stir-fry for 5 minutes",
       "Add soy sauce and cook for 2 more minutes",
@@ -136,7 +136,7 @@
       "1 tsp vanilla extract",
       "1 1/2 cups flour"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 350°F (175°C)",
       "Mash bananas in a bowl",
       "Mix in melted butter, sugar, egg, and vanilla",
@@ -157,7 +157,7 @@
       "1/2 cup white wine",
       "1/4 cup parsley, chopped"
     ],
-    "steps": [
+    "instructions": [
       "Cook linguine according to package instructions",
       "Sauté garlic in butter",
       "Add shrimp and cook until pink",
@@ -178,7 +178,7 @@
       "2 tsp vanilla extract",
       "3 cups flour"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 375°F (190°C)",
       "Cream butter and sugars",
       "Add eggs and vanilla",
@@ -199,7 +199,7 @@
       "1 onion, sliced",
       "Lettuce leaves"
     ],
-    "steps": [
+    "instructions": [
       "Form beef into patties",
       "Grill patties to desired doneness",
       "Add cheese during the last minute of cooking",
@@ -218,7 +218,7 @@
       "2 cups spinach",
       "1 cup shredded mozzarella"
     ],
-    "steps": [
+    "instructions": [
       "Preheat oven to 375°F (190°C)",
       "Cook lasagna noodles according to package instructions",
       "Layer noodles, marinara, ricotta, and vegetables in a baking dish",
@@ -239,7 +239,7 @@
       "1 egg",
       "3 tbsp melted butter"
     ],
-    "steps": [
+    "instructions": [
       "Mix dry ingredients in a bowl",
       "Whisk in milk, egg, and melted butter",
       "Heat a griddle over medium heat",
