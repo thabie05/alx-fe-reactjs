@@ -11,14 +11,15 @@ const HomePage = () => {
     }, []);
 
 return(
-    <div>
+    <div className="grid gap-3
+    sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {recipedata.map((recipe) => (
             <div className="
             taxt-white
-            bg-green-600 
-            w-60 p-3 m-3 
+            bg-gray-800 
+            w-80 p-3 m-5 
             bg-gradient-to-r 
-            from-red-500 h-50 
+            from-gray-500 h-50 
             border-dotted 
             rounded-xl 
             transition delay-150 duration-300 

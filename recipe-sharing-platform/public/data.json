@@ -1,14 +1,52 @@
 [
     {
       "id": 1,
-      "title": "Spaghetti Carbonara",
-      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-      "image": "https://via.placeholder.com/150"
+      "title": "Classic Spaghetti Carbonara",
+      "summary": "A traditional Italian pasta dish made with eggs, hard cheese, pancetta, and pepper."
     },
     {
       "id": 2,
       "title": "Chicken Tikka Masala",
-      "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-      "image": "https://via.placeholder.com/150"
+      "summary": "A popular Indian dish featuring marinated chicken cooked in a creamy tomato sauce with spices."
+    },
+    {
+      "id": 3,
+      "title": "Beef Bourguignon",
+      "summary": "A French stew made with beef braised in red wine, beef broth, and seasoned with garlic, onions, and mushrooms."
+    },
+    {
+      "id": 4,
+      "title": "Vegetarian Chili",
+      "summary": "A hearty and spicy chili made with beans, tomatoes, and a variety of vegetables, perfect for meatless meals."
+    },
+    {
+      "id": 5,
+      "title": "Thai Green Curry",
+      "summary": "A fragrant and spicy Thai curry made with green curry paste, coconut milk, vegetables, and your choice of protein."
+    },
+    {
+      "id": 6,
+      "title": "Classic Caesar Salad",
+      "summary": "A timeless salad featuring romaine lettuce, croutons, parmesan cheese, and a creamy Caesar dressing."
+    },
+    {
+      "id": 7,
+      "title": "Homemade Pizza Margherita",
+      "summary": "A simple yet delicious pizza topped with tomato sauce, fresh mozzarella, basil, and a drizzle of olive oil."
+    },
+    {
+      "id": 8,
+      "title": "Banana Bread",
+      "summary": "A moist and sweet bread made with ripe bananas, perfect for breakfast or as a snack."
+    },
+    {
+      "id": 9,
+      "title": "Shrimp Scampi",
+      "summary": "A flavorful dish of shrimp cooked in a garlicky, buttery sauce with a splash of white wine, served over pasta."
+    },
+    {
+      "id": 10,
+      "title": "Chocolate Lava Cake",
+      "summary": "A decadent dessert with a gooey, molten chocolate center, served warm with a scoop of vanilla ice cream."
     }
   ]
