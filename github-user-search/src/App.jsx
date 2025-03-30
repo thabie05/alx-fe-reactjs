@@ -1,4 +1,4 @@
-import SearchAdvanced from './components/SearchAdvanced/SearchAdvanced';
+import SearchAdvanced from './components/SearchAdvanced';
 
 function App() {
   return (
