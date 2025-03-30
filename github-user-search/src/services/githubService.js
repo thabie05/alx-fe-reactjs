@@ -10,17 +10,19 @@ const api = axios.create({
   }
 });
 
-export const searchUsers = async ({ username, location, minRepos }, page = 1) => {
+export const searchUsers = async (params, page = 1) => {
   try {
-    const queryParams = [
-      username && `in:login ${username}`,
-      location && `location:${location}`,
-      minRepos && `repos:>${minRepos}`
+    // Explicitly construct the search URL with query parameters
+    const query = [
+      params.username && `user:${params.username}`,
+      params.location && `location:${params.location}`,
+      params.minRepos && `repos:>${params.minRepos}`
     ].filter(Boolean).join('+');
 
-    const response = await api.get('/search/users', {
+    const searchUrl = `/search/users?q=${encodeURIComponent(query)}`;
+    
+    const response = await api.get(searchUrl, {
       params: {
-        q: queryParams,
         page,
         per_page: 10
       }
@@ -34,14 +36,5 @@ export const searchUsers = async ({ username, location, minRepos }, page = 1) =>
     };
   } catch (error) {
     throw new Error(error.response?.data?.message || 'Search failed');
-  }
-};
-
-export const getUserDetails = async (username) => {
-  try {
-    const response = await api.get(`/users/${username}`);
-    return response.data;
-  } catch (error) {
-    throw new Error(error.response?.data?.message || 'User not found');
   }
 };
