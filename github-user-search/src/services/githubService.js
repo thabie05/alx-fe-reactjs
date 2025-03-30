@@ -1,4 +1,5 @@
-import axios from 'axios'
+// src/services/githubService.js
+import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'https://api.github.com',
@@ -7,32 +8,40 @@ const api = axios.create({
       ? `Bearer ${import.meta.env.VITE_GITHUB_TOKEN}`
       : ''
   }
-})
+});
 
-export const fetchUserData = async (username) => {
+export const searchUsers = async ({ username, location, minRepos }, page = 1) => {
   try {
-    return await api.get(`/users/${username}`)
-  } catch (error) {
-    throw error.response?.data?.message || 'User not found'
-  }
-}
+    const queryParams = [
+      username && `in:login ${username}`,
+      location && `location:${location}`,
+      minRepos && `repos:>${minRepos}`
+    ].filter(Boolean).join('+');
 
-export const searchUsers = async (params, page = 1) => {
-  const query = [
-    params.username && `in:login ${params.username}`,
-    params.location && `location:${params.location}`,
-    params.repos && `repos:>${params.repos}`
-  ].filter(Boolean).join('+')
-
-  try {
-    return await api.get('/search/users', {
+    const response = await api.get('/search/users', {
       params: {
-        q: query,
+        q: queryParams,
         page,
         per_page: 10
       }
-    })
+    });
+
+    return {
+      users: response.data.items,
+      totalCount: response.data.total_count,
+      hasMore: response.data.items.length > 0 && 
+              (page * 10) < response.data.total_count
+    };
   } catch (error) {
-    throw error.response?.data?.message || 'Search failed'
+    throw new Error(error.response?.data?.message || 'Search failed');
   }
-}
+};
+
+export const getUserDetails = async (username) => {
+  try {
+    const response = await api.get(`/users/${username}`);
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || 'User not found');
+  }
+};
