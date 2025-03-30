@@ -41,7 +41,7 @@ const Search = () => {
       
       {error && (
         <p className="error">
-          <span style={{ color: 'red' }}>Error:</span> {error}
+          <span style={{ color: 'red' }}>Looks like we cant find the user:</span> {error}
         </p>
       )}
 
