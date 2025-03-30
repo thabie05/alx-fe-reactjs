@@ -10,7 +10,7 @@ const api = axios.create({
   }
 });
 
-export const searchUsers = async (params, page = 1) => {
+export const fetchUserData = async (params, page = 1) => {
   try {
     // Explicit URL construction with search endpoint
     const baseUrl = 'https://api.github.com/search/users?q=';
