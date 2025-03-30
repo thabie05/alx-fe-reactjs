@@ -12,16 +12,17 @@ const api = axios.create({
 
 export const searchUsers = async (params, page = 1) => {
   try {
-    // Explicitly construct the search URL with query parameters
+    // Explicit URL construction with search endpoint
+    const baseUrl = 'https://api.github.com/search/users?q=';
     const query = [
       params.username && `user:${params.username}`,
       params.location && `location:${params.location}`,
       params.minRepos && `repos:>${params.minRepos}`
     ].filter(Boolean).join('+');
 
-    const searchUrl = `/search/users?q=${encodeURIComponent(query)}`;
+    const fullUrl = `${baseUrl}${encodeURIComponent(query)}`;
     
-    const response = await api.get(searchUrl, {
+    const response = await api.get(fullUrl, {
       params: {
         page,
         per_page: 10
